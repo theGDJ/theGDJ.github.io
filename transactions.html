@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Transactions</h2>
+<table class="table table-bordered">
+<thead><tr><th>ID</th><th>Member</th><th>Book</th><th>Issued</th><th>Due</th><th>Returned</th><th>Fine</th></tr></thead>
+<tbody>
+{% for t in txns %}
+<tr><td>{{ t.txn_id }}</td><td>{{ lib.members[t.member_id].name }}</td><td>{{ lib.books[t.isbn].title }}</td><td>{{ t.issued_on }}</td><td>{{ t.due_on }}</td><td>{{ t.returned_on or 'Pending' }}</td><td>{{ t.fine_paid }}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

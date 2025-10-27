@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Issue Book</h2>
+<form method="post">
+<div class="mb-3"><label>Member</label>
+<select class="form-control" name="member_id" required>
+{% for m in members %}<option value="{{ m.member_id }}">{{ m.name }}</option>{% endfor %}
+</select></div>
+<div class="mb-3"><label>Book</label>
+<select class="form-control" name="isbn" required>
+{% for b in books %}<option value="{{ b.isbn }}">{{ b.title }} ({{ b.available_copies }}/{{ b.total_copies }})</option>{% endfor %}
+</select></div>
+<button class="btn btn-primary">Issue</button>
+</form>
+{% endblock %}

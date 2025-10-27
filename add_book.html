@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add Book</h2>
+<form method="post">
+<div class="mb-3"><label>ISBN</label><input class="form-control" name="isbn" required></div>
+<div class="mb-3"><label>Title</label><input class="form-control" name="title" required></div>
+<div class="mb-3"><label>Authors (comma-separated)</label><input class="form-control" name="authors" required></div>
+<div class="mb-3"><label>Copies</label><input class="form-control" name="copies" type="number" value="1"></div>
+<button class="btn btn-primary">Add Book</button>
+</form>
+{% endblock %}

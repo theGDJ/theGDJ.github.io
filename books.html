@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Books</h2>
+<a href="/add_book" class="btn btn-success mb-3">Add Book</a>
+<table class="table table-striped">
+<thead><tr><th>ISBN</th><th>Title</th><th>Authors</th><th>Available/Total</th></tr></thead>
+<tbody>
+{% for b in books %}
+<tr><td>{{ b.isbn }}</td><td>{{ b.title }}</td><td>{{ ', '.join(b.authors) }}</td><td>{{ b.available_copies }}/{{ b.total_copies }}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add Member</h2>
+<form method="post">
+<div class="mb-3"><label>Name</label><input class="form-control" name="name" required></div>
+<div class="mb-3"><label>Email</label><input class="form-control" name="email"></div>
+<div class="mb-3"><label>Phone</label><input class="form-control" name="phone"></div>
+<button class="btn btn-primary">Add Member</button>
+</form>
+{% endblock %}

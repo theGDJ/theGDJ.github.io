@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center">
+<h1>Welcome to Library Management</h1>
+<p class="lead">Manage books, members, and transactions efficiently.</p>
+<div class="row justify-content-center mt-4">
+<div class="col-md-3">
+<div class="card"><div class="card-body text-center"><h4>{{ books }}</h4><p>Books</p></div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body text-center"><h4>{{ members }}</h4><p>Members</p></div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body text-center"><h4>{{ txns }}</h4><p>Transactions</p></div></div>
+</div>
+</div>
+</div>
+{% endblock %}
